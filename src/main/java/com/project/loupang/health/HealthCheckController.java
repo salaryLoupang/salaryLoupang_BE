@@ -17,7 +17,7 @@ public class HealthCheckController {
             @ApiResponse(responseCode = "200", description = "OK")
     })
     @GetMapping("/v1/api/health")
-    public String healthCheck(@AuthenticationPrincipal UserDetailsImpl userDetails){
+    public String healthCheck(){
         return "1";
     }
 }
