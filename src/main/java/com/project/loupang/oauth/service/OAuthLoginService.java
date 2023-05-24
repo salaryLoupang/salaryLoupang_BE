@@ -19,7 +19,8 @@ public class OAuthLoginService {
     public AuthTokens login(OAuthLoginParams params) {
         OAuthInfoResponse oAuthInfoResponse = requestOAuthInfoService.request(params);
         Long memberId = findOrCreateMember(oAuthInfoResponse);
-        return authTokensGenerator.generate(memberId);
+        String username = findMember(oAuthInfoResponse);
+        return authTokensGenerator.generate(memberId, username);
     }
 
     private Long findOrCreateMember(OAuthInfoResponse oAuthInfoResponse) {
@@ -28,10 +29,16 @@ public class OAuthLoginService {
                 .orElseGet(() -> newMember(oAuthInfoResponse));
     }
 
+    private String findMember(OAuthInfoResponse oAuthInfoResponse) {
+        return memberRepository.findByEmail(oAuthInfoResponse.getEmail())
+                .map(Member::getUsername)
+                .orElseGet(() -> null);
+    }
+
     private Long newMember(OAuthInfoResponse oAuthInfoResponse) {
         Member member = Member.builder()
                 .email(oAuthInfoResponse.getEmail())
-                .nickname(oAuthInfoResponse.getNickname())
+                .username(oAuthInfoResponse.getNickname())
                 .oAuthProvider(oAuthInfoResponse.getOAuthProvider())
                 .build();
 

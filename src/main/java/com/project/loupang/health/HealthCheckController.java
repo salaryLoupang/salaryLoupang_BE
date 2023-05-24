@@ -1,8 +1,10 @@
 package com.project.loupang.health;
 
+import com.project.loupang.security.UserDetailsImpl;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,7 +17,7 @@ public class HealthCheckController {
             @ApiResponse(responseCode = "200", description = "OK")
     })
     @GetMapping("/v1/api/health")
-    public String healthCheck(){
+    public String healthCheck(@AuthenticationPrincipal UserDetailsImpl userDetails){
         return "1";
     }
 }

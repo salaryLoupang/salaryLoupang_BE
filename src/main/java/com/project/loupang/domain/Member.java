@@ -20,14 +20,14 @@ public class Member {
 
     private String email;
 
-    private String nickname;
+    private String username;
 
     private OAuthProvider oAuthProvider;
 
     @Builder
-    public Member(String email, String nickname, OAuthProvider oAuthProvider) {
+    public Member(String email, String username, OAuthProvider oAuthProvider) {
         this.email = email;
-        this.nickname = nickname;
+        this.username = username;
         this.oAuthProvider = oAuthProvider;
     }
 }

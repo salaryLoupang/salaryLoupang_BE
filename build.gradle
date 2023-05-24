@@ -33,6 +33,16 @@ dependencies {
 	implementation 'io.jsonwebtoken:jjwt-jackson:0.11.5'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.apache.httpcomponents:httpclient'
+//xss
+	implementation 'org.apache.commons:commons-text:1.9'
+	implementation 'com.navercorp.lucy:lucy-xss-servlet:2.0.0'
+
+	implementation "ch.qos.logback:logback-classic:1.2.3"
+	implementation "ch.qos.logback:logback-core:1.2.3"
+
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+
 }
 
 tasks.named('test') {
