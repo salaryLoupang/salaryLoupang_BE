@@ -18,27 +18,32 @@ public class OAuthLoginService {
 
     public AuthTokens login(OAuthLoginParams params) {
         OAuthInfoResponse oAuthInfoResponse = requestOAuthInfoService.request(params);
-        Long memberId = findOrCreateMember(oAuthInfoResponse);
+        Long memberId = findOrCreateMember(oAuthInfoResponse, params);
         String username = findMember(oAuthInfoResponse);
         return authTokensGenerator.generate(memberId, username);
     }
 
-    private Long findOrCreateMember(OAuthInfoResponse oAuthInfoResponse) {
+    private Long findOrCreateMember(OAuthInfoResponse oAuthInfoResponse, OAuthLoginParams params) {
         return memberRepository.findByEmail(oAuthInfoResponse.getEmail())
                 .map(Member::getId)
-                .orElseGet(() -> newMember(oAuthInfoResponse));
+                .orElseGet(() -> newMember(oAuthInfoResponse, params));
     }
 
     private String findMember(OAuthInfoResponse oAuthInfoResponse) {
         return memberRepository.findByEmail(oAuthInfoResponse.getEmail())
-                .map(Member::getUsername)
+                .map(Member::getNickName)
                 .orElseGet(() -> null);
     }
 
-    private Long newMember(OAuthInfoResponse oAuthInfoResponse) {
+    private Long newMember(OAuthInfoResponse oAuthInfoResponse, OAuthLoginParams params) {
         Member member = Member.builder()
                 .email(oAuthInfoResponse.getEmail())
                 .username(oAuthInfoResponse.getNickname())
+                .nickName(params.getNickName())
+                .job(params.getJob())
+                .career(params.getCareer())
+                .jobGroup(params.getJobGroup())
+                .salary(params.getSalary())
                 .oAuthProvider(oAuthInfoResponse.getOAuthProvider())
                 .build();
 
