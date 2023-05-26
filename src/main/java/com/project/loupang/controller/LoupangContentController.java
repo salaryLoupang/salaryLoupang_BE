@@ -1,8 +1,11 @@
 package com.project.loupang.controller;
 
 import com.project.loupang.request.MenuRecommendRequest;
+import com.project.loupang.request.TravelRecommendRequest;
 import com.project.loupang.response.MenuRecommendResponse;
+import com.project.loupang.response.TravelRecommendResponse;
 import com.project.loupang.service.MenuRecommendService;
+import com.project.loupang.service.TravelRecommendService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
@@ -17,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class LoupangContentController {
 
     private final MenuRecommendService menuService;
+    private final TravelRecommendService travelService;
 
     @Operation(summary = "메뉴 추천 API", description = "제목,내용,imageUrl", tags = { "LoupangContentController" })
     @ApiResponses({
@@ -27,6 +31,15 @@ public class LoupangContentController {
         return menuService.recommend();
     }
 
+    @Operation(summary = "여행지 추천 API", description = "제목,내용,imageUrl", tags = { "LoupangContentController" })
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "OK")
+    })
+    @GetMapping("/v1/api/travel")
+    public TravelRecommendResponse recommendTravel(){
+        return travelService.recommend();
+    }
+
     @Operation(summary = "메뉴 등록용 API", description = "DB 저장용 API (기능과 무관)", tags = { "LoupangContentController" })
     @ApiResponses({
             @ApiResponse(responseCode = "200", description = "OK")
@@ -35,5 +48,15 @@ public class LoupangContentController {
     public String insertMenu(@RequestBody MenuRecommendRequest request){
         menuService.insert(request);
         return "메뉴등록 완료";
+    }
+
+    @Operation(summary = "여행지 등록용 API", description = "DB 저장용 API (기능과 무관)", tags = { "LoupangContentController" })
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "OK")
+    })
+    @PostMapping("/v1/api/travel")
+    public String insertTravel(@RequestBody TravelRecommendRequest request){
+        travelService.insert(request);
+        return "여행지등록 완료";
     }
 }

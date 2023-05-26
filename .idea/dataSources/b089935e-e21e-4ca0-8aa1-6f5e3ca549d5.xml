@@ -1030,52 +1030,73 @@ sys|schema||loupang||grant option|G</Grants>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="288" parent="285" name="email">
+    <column id="288" parent="285" name="career">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="289" parent="285" name="o_auth_provider">
-      <DasType>int|0s</DasType>
+    <column id="289" parent="285" name="email">
+      <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="290" parent="285" name="username">
+    <column id="290" parent="285" name="job">
       <DasType>varchar(255)|0s</DasType>
       <Position>4</Position>
     </column>
-    <index id="291" parent="285" name="PRIMARY">
+    <column id="291" parent="285" name="job_group">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="292" parent="285" name="nick_name">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <column id="293" parent="285" name="o_auth_provider">
+      <DasType>int|0s</DasType>
+      <Position>7</Position>
+    </column>
+    <column id="294" parent="285" name="salary">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <column id="295" parent="285" name="username">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>9</Position>
+    </column>
+    <index id="296" parent="285" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="292" parent="285" name="PRIMARY">
+    <key id="297" parent="285" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="293" parent="286" name="id">
-      <AutoIncrement>3</AutoIncrement>
+    <column id="298" parent="286" name="id">
+      <AutoIncrement>7</AutoIncrement>
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="294" parent="286" name="description">
+    <column id="299" parent="286" name="description">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="295" parent="286" name="img_url">
+    <column id="300" parent="286" name="img_url">
       <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="296" parent="286" name="title">
+    <column id="301" parent="286" name="title">
       <DasType>varchar(255)|0s</DasType>
       <Position>4</Position>
     </column>
-    <index id="297" parent="286" name="PRIMARY">
+    <index id="302" parent="286" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="298" parent="286" name="PRIMARY">
+    <key id="303" parent="286" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
