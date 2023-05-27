@@ -26,7 +26,7 @@ public class AuthTokensGenerator {
         String accessToken = jwtTokenProvider.generate(subject, username);
         String refreshToken = jwtTokenProvider.generate(subject, username);
 
-        return AuthTokens.of(accessToken, refreshToken, BEARER_TYPE, ACCESS_TOKEN_EXPIRE_TIME / 1000L);
+        return AuthTokens.of(accessToken, refreshToken, BEARER_TYPE, ACCESS_TOKEN_EXPIRE_TIME / 1000L, memberId);
     }
 
     public Long extractMemberId(String accessToken) {

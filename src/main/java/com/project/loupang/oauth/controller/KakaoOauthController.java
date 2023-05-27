@@ -4,11 +4,13 @@ import com.project.loupang.oauth.KakaoLoginParams;
 import com.project.loupang.oauth.SignupParams;
 import com.project.loupang.oauth.jwt.AuthTokens;
 import com.project.loupang.oauth.service.OAuthLoginService;
+import com.project.loupang.security.UserDetailsImpl;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -46,7 +48,7 @@ public class KakaoOauthController {
             @ApiResponse(responseCode = "200", description = "OK")
     })
     @PostMapping("/v1/api/signup")
-    public ResponseEntity<AuthTokens> signupKakao(@RequestBody SignupParams params) {
-        return ResponseEntity.ok(oAuthLoginService.login(params));
+    public ResponseEntity<AuthTokens> signupKakao(@RequestBody SignupParams params, @AuthenticationPrincipal UserDetailsImpl userDetails) {
+        return ResponseEntity.ok(oAuthLoginService.update(params, userDetails));
     }
 }

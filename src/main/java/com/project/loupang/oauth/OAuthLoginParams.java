@@ -7,9 +7,4 @@ public interface OAuthLoginParams {
     OAuthProvider oAuthProvider();
     MultiValueMap<String, String> makeBody();
 
-    String getNickName();
-    String getCareer();
-    String getJobGroup();
-    String getJob();
-    int getSalary();
 }

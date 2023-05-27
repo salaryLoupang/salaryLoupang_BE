@@ -2,12 +2,15 @@ package com.project.loupang.oauth.service;
 
 import com.project.loupang.domain.Member;
 import com.project.loupang.oauth.OAuthLoginParams;
+import com.project.loupang.oauth.SignupParams;
 import com.project.loupang.oauth.jwt.AuthTokens;
 import com.project.loupang.oauth.jwt.AuthTokensGenerator;
 import com.project.loupang.oauth.repository.MemberRepository;
 import com.project.loupang.response.OAuthInfoResponse;
+import com.project.loupang.security.UserDetailsImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
@@ -24,14 +27,28 @@ public class OAuthLoginService {
     }
 
     private Long findOrCreateMember(OAuthInfoResponse oAuthInfoResponse, OAuthLoginParams params) {
-        return memberRepository.findByEmail(oAuthInfoResponse.getEmail())
-                .map(Member::getId)
-                .orElseGet(() -> newMember(oAuthInfoResponse, params));
+        Member member = memberRepository.findByEmail(oAuthInfoResponse.getEmail()).orElse(null);
+        if(member == null){
+            newMember(oAuthInfoResponse,params);
+            return 0L;
+        }
+        return member.getId();
+    }
+
+    @Transactional
+    public AuthTokens update(SignupParams params, UserDetailsImpl userDetails) {
+        Member member = memberRepository.findById(userDetails.getUserId()).orElse(null);
+        Long memberId = updateMember(member, params);
+        return authTokensGenerator.generate(memberId, member.getUsername());
+    }
+    public Long updateMember(Member member, SignupParams params) {
+        member.updateMember(params);
+        return member.getId();
     }
 
     private String findMember(OAuthInfoResponse oAuthInfoResponse) {
         return memberRepository.findByEmail(oAuthInfoResponse.getEmail())
-                .map(Member::getNickName)
+                .map(Member::getEmail)
                 .orElseGet(() -> null);
     }
 
@@ -39,11 +56,6 @@ public class OAuthLoginService {
         Member member = Member.builder()
                 .email(oAuthInfoResponse.getEmail())
                 .username(oAuthInfoResponse.getNickname())
-                .nickName(params.getNickName())
-                .job(params.getJob())
-                .career(params.getCareer())
-                .jobGroup(params.getJobGroup())
-                .salary(params.getSalary())
                 .oAuthProvider(oAuthInfoResponse.getOAuthProvider())
                 .build();
 

@@ -1,5 +1,6 @@
 package com.project.loupang.domain;
 
+import com.project.loupang.oauth.SignupParams;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;
 import lombok.Getter;
@@ -41,5 +42,13 @@ public class Member {
         this.jobGroup = jobGroup;
         this.job = job;
         this.salary = salary;
+    }
+
+    public void updateMember(SignupParams params) {
+        this.nickName = params.getNickName();
+        this.career = params.getCareer();
+        this.jobGroup = params.getJobGroup();
+        this.job = params.getJob();
+        this.salary = params.getSalary();
     }
 }

@@ -40,7 +40,7 @@ public class JwtTokenProvider {
 
         Map<String , Object> claimsMap = new HashMap<String , Object>();
             claimsMap.put("userId" ,userPk);
-            claimsMap.put("username" , username);
+            claimsMap.put("useremail" , username);
         Date now = new Date();
         return Jwts.builder()
                 .setClaims(claimsMap)
@@ -57,7 +57,7 @@ public class JwtTokenProvider {
     }
 
     public String getUserPk(String token) {
-        return Jwts.parser().setSigningKey(secretKey).parseClaimsJws(token).getBody().get("username", String.class);
+        return Jwts.parser().setSigningKey(secretKey).parseClaimsJws(token).getBody().get("useremail", String.class);
     }
     public String getNickName(String token) {
         return Jwts.parser().setSigningKey(secretKey).parseClaimsJws(token).getBody().get("nickname", String.class);

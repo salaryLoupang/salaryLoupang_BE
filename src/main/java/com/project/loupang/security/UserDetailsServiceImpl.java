@@ -21,7 +21,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     //UserDetailsService가 가지고 있는 함수중 loadUserByUsername 를 사용
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Member user = userRepository.findByUsername(username)
+        Member user = userRepository.findByEmail(username)
 
                 .orElseThrow(() -> new UsernameNotFoundException("Can't find " + username));
 

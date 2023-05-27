@@ -11,16 +11,24 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/project/loupang/controller/LoupangContentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/project/loupang/controller/LoupangContentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/project/loupang/oauth/KakaoLoginParams.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/project/loupang/oauth/KakaoLoginParams.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/project/loupang/oauth/controller/KakaoOauthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/project/loupang/oauth/controller/KakaoOauthController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/project/loupang/oauth/jwt/AuthTokens.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/project/loupang/oauth/jwt/AuthTokens.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/LoupangContentController.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/project/loupang/oauth/jwt/JwtTokenProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/project/loupang/oauth/jwt/JwtTokenProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/project/loupang/oauth/service/OAuthLoginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/project/loupang/oauth/service/OAuthLoginService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/project/loupang/security/UserDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/project/loupang/security/UserDetailsServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/loupang/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/loupang/domain/Member.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/loupang/oauth/KakaoLoginParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/loupang/oauth/KakaoLoginParams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/loupang/oauth/OAuthLoginParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/loupang/oauth/OAuthLoginParams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/loupang/oauth/SignupParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/loupang/oauth/SignupParams.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/loupang/oauth/controller/KakaoOauthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/loupang/oauth/controller/KakaoOauthController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/loupang/oauth/jwt/AuthTokens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/loupang/oauth/jwt/AuthTokens.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/loupang/oauth/jwt/AuthTokensGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/loupang/oauth/jwt/AuthTokensGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/loupang/oauth/jwt/JwtTokenProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/loupang/oauth/jwt/JwtTokenProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/loupang/oauth/service/OAuthLoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/loupang/oauth/service/OAuthLoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/loupang/security/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/loupang/security/UserDetailsServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,11 +128,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.project.loupang.oauth" />
       <recent name="com.project.loupang.repository" />
       <recent name="com.project.loupang.service" />
       <recent name="com.project.loupang.request" />
       <recent name="com.project.loupang.domain" />
-      <recent name="com.project.loupang.response" />
     </key>
   </component>
   <component name="RunManager">
