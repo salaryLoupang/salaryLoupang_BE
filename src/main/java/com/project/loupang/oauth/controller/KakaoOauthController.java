@@ -3,6 +3,7 @@ package com.project.loupang.oauth.controller;
 import com.project.loupang.oauth.KakaoLoginParams;
 import com.project.loupang.oauth.jwt.AuthTokens;
 import com.project.loupang.oauth.service.OAuthLoginService;
+import com.project.loupang.oauth.service.SignupParams;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
@@ -31,12 +32,21 @@ public class KakaoOauthController {
         return result;
     }
 
-    @Operation(summary = "로그인/회원가입 API", description = "회원 정보가 있을 경우 Login / 없을 경우 회원가입", tags = { "KakaoOauthController" })
+    @Operation(summary = "로그인 API", description = "회원 정보가 있을 경우 Login", tags = { "KakaoOauthController" })
     @ApiResponses({
             @ApiResponse(responseCode = "200", description = "OK")
     })
     @PostMapping("/v1/api/login")
     public ResponseEntity<AuthTokens> loginKakao(@RequestBody KakaoLoginParams params) {
+        return ResponseEntity.ok(oAuthLoginService.login(params));
+    }
+
+    @Operation(summary = "회원가입 API", description = "회원가입", tags = { "KakaoOauthController" })
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "OK")
+    })
+    @PostMapping("/v1/api/signup")
+    public ResponseEntity<AuthTokens> loginKakao(@RequestBody SignupParams params) {
         return ResponseEntity.ok(oAuthLoginService.login(params));
     }
 }
