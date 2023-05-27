@@ -2,11 +2,11 @@
   <library name="Gradle: org.springframework.boot:spring-boot-starter-web:2.7.13-SNAPSHOT" type="java-imported" external-system-id="GRADLE">
     <properties groupId="org.springframework.boot" artifactId="spring-boot-starter-web" version="2.7.13-SNAPSHOT" />
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-web/2.7.13-SNAPSHOT/e3ad174e92ace35da26be171264570fc288dfef5/spring-boot-starter-web-2.7.13-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-web/2.7.13-SNAPSHOT/a99a5fad7debbb8388e8756be64f992983e0c233/spring-boot-starter-web-2.7.13-SNAPSHOT.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-web/2.7.13-SNAPSHOT/361596e922a9fab83f714e180e241ef988deeb6/spring-boot-starter-web-2.7.13-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-web/2.7.13-SNAPSHOT/df93a85aa33e5737902f8975d775f6734e6a5d91/spring-boot-starter-web-2.7.13-SNAPSHOT-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

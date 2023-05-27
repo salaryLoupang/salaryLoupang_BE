@@ -2,11 +2,11 @@
   <library name="Gradle: org.springframework.boot:spring-boot-test-autoconfigure:2.7.13-SNAPSHOT" type="java-imported" external-system-id="GRADLE">
     <properties groupId="org.springframework.boot" artifactId="spring-boot-test-autoconfigure" version="2.7.13-SNAPSHOT" />
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test-autoconfigure/2.7.13-SNAPSHOT/175fc9836d5389660db39eacf4dfb0ff4521efd6/spring-boot-test-autoconfigure-2.7.13-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test-autoconfigure/2.7.13-SNAPSHOT/d940981bb7409145fe453cbd8f0ebd7d528aa9c/spring-boot-test-autoconfigure-2.7.13-SNAPSHOT.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test-autoconfigure/2.7.13-SNAPSHOT/be6605716f88f7ee3ac33c2bfbe4fd7f436cc182/spring-boot-test-autoconfigure-2.7.13-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test-autoconfigure/2.7.13-SNAPSHOT/dae45eb4b27f0685976225d81564fefd98bf04b1/spring-boot-test-autoconfigure-2.7.13-SNAPSHOT-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

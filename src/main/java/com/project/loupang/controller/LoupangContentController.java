@@ -4,12 +4,14 @@ import com.project.loupang.request.MenuRecommendRequest;
 import com.project.loupang.request.TravelRecommendRequest;
 import com.project.loupang.response.MenuRecommendResponse;
 import com.project.loupang.response.TravelRecommendResponse;
+import com.project.loupang.security.UserDetailsImpl;
 import com.project.loupang.service.MenuRecommendService;
 import com.project.loupang.service.TravelRecommendService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -27,7 +29,7 @@ public class LoupangContentController {
             @ApiResponse(responseCode = "200", description = "OK")
     })
     @GetMapping("/v1/api/menu")
-    public MenuRecommendResponse recommendMenu(){
+    public MenuRecommendResponse recommendMenu(@AuthenticationPrincipal UserDetailsImpl userDetails){
         return menuService.recommend();
     }
 
@@ -36,7 +38,7 @@ public class LoupangContentController {
             @ApiResponse(responseCode = "200", description = "OK")
     })
     @GetMapping("/v1/api/travel")
-    public TravelRecommendResponse recommendTravel(){
+    public TravelRecommendResponse recommendTravel(@AuthenticationPrincipal UserDetailsImpl userDetails){
         return travelService.recommend();
     }
 
@@ -45,7 +47,7 @@ public class LoupangContentController {
             @ApiResponse(responseCode = "200", description = "OK")
     })
     @PostMapping("/v1/api/menu")
-    public String insertMenu(@RequestBody MenuRecommendRequest request){
+    public String insertMenu(@RequestBody MenuRecommendRequest request,@AuthenticationPrincipal UserDetailsImpl userDetails){
         menuService.insert(request);
         return "메뉴등록 완료";
     }
@@ -55,7 +57,7 @@ public class LoupangContentController {
             @ApiResponse(responseCode = "200", description = "OK")
     })
     @PostMapping("/v1/api/travel")
-    public String insertTravel(@RequestBody TravelRecommendRequest request){
+    public String insertTravel(@RequestBody TravelRecommendRequest request,@AuthenticationPrincipal UserDetailsImpl userDetails){
         travelService.insert(request);
         return "여행지등록 완료";
     }

@@ -2,11 +2,11 @@
   <library name="Gradle: org.springframework.boot:spring-boot-starter-tomcat:2.7.13-SNAPSHOT" type="java-imported" external-system-id="GRADLE">
     <properties groupId="org.springframework.boot" artifactId="spring-boot-starter-tomcat" version="2.7.13-SNAPSHOT" />
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-tomcat/2.7.13-SNAPSHOT/f01f514b4a1ebd7e48612410fbe797b5e7a9a8d4/spring-boot-starter-tomcat-2.7.13-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-tomcat/2.7.13-SNAPSHOT/d857ae4e476b475f77b4b602b964bb136f67d280/spring-boot-starter-tomcat-2.7.13-SNAPSHOT.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-tomcat/2.7.13-SNAPSHOT/3f7b1e5c663c84138a46ed111f32112e32f47da9/spring-boot-starter-tomcat-2.7.13-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-tomcat/2.7.13-SNAPSHOT/e6e4e109b77fa1ab9f2cddb77645c3ade80b97da/spring-boot-starter-tomcat-2.7.13-SNAPSHOT-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
