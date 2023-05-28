@@ -5,27 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="150856c5-7c78-4f6e-8199-5ae909dd7e1f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b089935e-e21e-4ca0-8aa1-6f5e3ca549d5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b089935e-e21e-4ca0-8aa1-6f5e3ca549d5.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/project/loupang/LoupangApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/project/loupang/LoupangApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/project/loupang/aop/SalaryServiceAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/project/loupang/aop/SalaryServiceAspect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/project/loupang/controller/LoupangContentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/project/loupang/controller/LoupangContentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/project/loupang/oauth/controller/KakaoOauthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/project/loupang/oauth/controller/KakaoOauthController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/project/loupang/service/LoupangCountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/project/loupang/service/LoupangCountService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/loupang/LoupangApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/loupang/LoupangApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/loupang/aop/SalaryServiceAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/loupang/aop/SalaryServiceAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/loupang/controller/LoupangContentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/loupang/controller/LoupangContentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/loupang/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/loupang/domain/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/loupang/oauth/controller/KakaoOauthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/loupang/oauth/controller/KakaoOauthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/loupang/oauth/service/OAuthLoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/loupang/oauth/service/OAuthLoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/loupang/service/LoupangCountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/loupang/service/LoupangCountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/loupang/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/loupang/config/WebConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
