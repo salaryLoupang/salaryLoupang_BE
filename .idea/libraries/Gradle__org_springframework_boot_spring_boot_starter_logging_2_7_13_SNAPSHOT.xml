@@ -2,11 +2,11 @@
   <library name="Gradle: org.springframework.boot:spring-boot-starter-logging:2.7.13-SNAPSHOT" type="java-imported" external-system-id="GRADLE">
     <properties groupId="org.springframework.boot" artifactId="spring-boot-starter-logging" version="2.7.13-SNAPSHOT" />
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-logging/2.7.13-SNAPSHOT/8e705d3d20ddc5c1955a4755de24c66a7fe5cf73/spring-boot-starter-logging-2.7.13-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-logging/2.7.13-SNAPSHOT/6698141a99870333e30f41d29b9b10a5567ede68/spring-boot-starter-logging-2.7.13-SNAPSHOT.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-logging/2.7.13-SNAPSHOT/e513236b12dbfcf3f42c4cbd8505e07f14d6aa23/spring-boot-starter-logging-2.7.13-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-logging/2.7.13-SNAPSHOT/c6cf9e9dc5272c50b3e3af8f517fb33da9a82cb8/spring-boot-starter-logging-2.7.13-SNAPSHOT-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

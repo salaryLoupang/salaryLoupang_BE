@@ -2,11 +2,11 @@
   <library name="Gradle: org.springframework.boot:spring-boot:2.7.13-SNAPSHOT" type="java-imported" external-system-id="GRADLE">
     <properties groupId="org.springframework.boot" artifactId="spring-boot" version="2.7.13-SNAPSHOT" />
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/2.7.13-SNAPSHOT/cef514ee9cf94c2aa491152ea332b44d36b67a53/spring-boot-2.7.13-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/2.7.13-SNAPSHOT/49964117a89d5be117aed64124fd7b61eb11642b/spring-boot-2.7.13-SNAPSHOT.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/2.7.13-SNAPSHOT/27f37551f827097129e510e972248d3fa1dafa35/spring-boot-2.7.13-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/2.7.13-SNAPSHOT/868ef8366349135c2685c50336472e392f83b1b/spring-boot-2.7.13-SNAPSHOT-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
