@@ -12,6 +12,10 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 @Service
 @RequiredArgsConstructor
 public class OAuthLoginService {
@@ -42,7 +46,10 @@ public class OAuthLoginService {
         return authTokensGenerator.generate(memberId, member.getUsername());
     }
     public Long updateMember(Member member, SignupParams params) {
-        member.updateMember(params);
+        SimpleDateFormat mSimpleDateFormat = new SimpleDateFormat ( "yyyy-MM-dd HH:mm:ss", Locale.KOREA );
+        Date currentTime = new Date ();
+        String mTime = mSimpleDateFormat.format ( currentTime );
+        member.updateMember(params,mTime);
         return member.getId();
     }
 

@@ -32,6 +32,10 @@ public class Member {
 
     private OAuthProvider oAuthProvider;
 
+    private String startTime;
+    private long loupangTime;
+    private String imageUrl;
+
     @Builder
     public Member(String email, String username, OAuthProvider oAuthProvider, String nickName, String career, String jobGroup, String job, int salary) {
         this.email = email;
@@ -44,11 +48,22 @@ public class Member {
         this.salary = salary;
     }
 
-    public void updateMember(SignupParams params) {
+    public void updateMember(SignupParams params, String mTime) {
         this.nickName = params.getNickName();
         this.career = params.getCareer();
         this.jobGroup = params.getJobGroup();
         this.job = params.getJob();
         this.salary = params.getSalary();
+        this.startTime = mTime;
+        this.loupangTime = 0L;
+    }
+
+    public void initLoupangTime(String startTime, long diffSeconds) {
+        this.startTime = startTime;
+        this.loupangTime = diffSeconds;
+    }
+
+    public void initImage(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }
