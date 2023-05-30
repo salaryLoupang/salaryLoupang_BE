@@ -22,7 +22,7 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addMapping("/**")
 
                 // 주소 수정 부분
-                .allowedOrigins(
+                .allowedOriginPatterns(
                         "*"
                 )
                 .allowedOriginPatterns("*")
