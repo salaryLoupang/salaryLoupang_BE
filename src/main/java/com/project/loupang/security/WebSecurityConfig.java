@@ -19,6 +19,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.CorsUtils;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 
@@ -54,7 +55,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         // POST 요청에 대한 CSRF를 추가로 무시해 줘야 접근이 가능합니다.
         http.csrf().disable();
         // 시큐리티에 cors를 맞춘다
-        http.cors();
+        http.cors().configurationSource(request -> new CorsConfiguration().applyPermitDefaultValues());
         http.headers().frameOptions().disable();
         http.authorizeRequests()
                 // api 요청 접근허용
@@ -68,24 +69,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
                 .antMatchers(HttpMethod.POST,"/api/**").permitAll()
                 .antMatchers(HttpMethod.GET,"/api/**").permitAll()
-
-                .antMatchers(HttpMethod.POST,"/chat/**").permitAll()
-                .antMatchers(HttpMethod.GET,"/chat/**").permitAll()
-
-                .antMatchers(HttpMethod.POST,"/room/**").permitAll()
-                .antMatchers(HttpMethod.GET,"/room/**").permitAll()
-
-                .antMatchers(HttpMethod.POST,"/pub/**").permitAll()
-                .antMatchers(HttpMethod.GET,"/pub/**").permitAll()
-
-                .antMatchers(HttpMethod.POST,"/sub/**").permitAll()
-                .antMatchers(HttpMethod.GET,"/sub/**").permitAll()
-
-                .antMatchers(HttpMethod.GET,"/ws-stomp/**").permitAll()
-                .antMatchers(HttpMethod.POST,"/ws-stomp/**").permitAll()
-
                 // 그 외 모든 요청은 인증과정 필요
                 .anyRequest().authenticated()
+                .requestMatchers(CorsUtils::isPreFlightRequest).permitAll()
                 .and()
 
                 // 토큰을 활용하면 세션이 필요 없으므로 STATELESS로 설정하여 Session을 사용하지 않는다.
@@ -99,7 +85,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
 
-        configuration.addAllowedOrigin("http://13.125.244.223:8888");
+        configuration.addAllowedOrigin("http://localhost:4000");
+        configuration.addAllowedOrigin("http://223.130.132.214");
+        configuration.addAllowedOrigin("http://121.170.136.128:60005");
         configuration.addAllowedOrigin("http://localhost:3000");
         configuration.setAllowCredentials(true);
         configuration.addAllowedHeader("*");

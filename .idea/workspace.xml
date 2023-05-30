@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="150856c5-7c78-4f6e-8199-5ae909dd7e1f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/loupang/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/loupang/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/loupang/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/loupang/security/WebSecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
