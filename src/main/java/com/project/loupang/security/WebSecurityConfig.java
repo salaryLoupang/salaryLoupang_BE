@@ -55,7 +55,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         // POST 요청에 대한 CSRF를 추가로 무시해 줘야 접근이 가능합니다.
         http.csrf().disable();
         // 시큐리티에 cors를 맞춘다
-        http.cors().configurationSource(request -> new CorsConfiguration().applyPermitDefaultValues());
+        http.cors();
         http.headers().frameOptions().disable();
         http.authorizeRequests()
                 // api 요청 접근허용
@@ -71,7 +71,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.GET,"/api/**").permitAll()
                 // 그 외 모든 요청은 인증과정 필요
                 .anyRequest().authenticated()
-                .requestMatchers(CorsUtils::isPreFlightRequest).permitAll()
                 .and()
 
                 // 토큰을 활용하면 세션이 필요 없으므로 STATELESS로 설정하여 Session을 사용하지 않는다.
