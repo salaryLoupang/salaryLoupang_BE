@@ -15,10 +15,6 @@ public class AuthTokensGenerator {
     private final JwtTokenProvider jwtTokenProvider;
 
     public AuthTokens generate(Long memberId, String username) {
-        long now = (new Date()).getTime();
-        Date accessTokenExpiredAt = new Date(now + ACCESS_TOKEN_EXPIRE_TIME);
-        Date refreshTokenExpiredAt = new Date(now + REFRESH_TOKEN_EXPIRE_TIME);
-
         String subject = memberId.toString();
         /**
          * TODO: 추후 닉네임 필요할 시 nickName도 넣어서 return
@@ -26,7 +22,7 @@ public class AuthTokensGenerator {
         String accessToken = jwtTokenProvider.generate(subject, username);
         String refreshToken = jwtTokenProvider.generate(subject, username);
 
-        return AuthTokens.of(accessToken, refreshToken, BEARER_TYPE, ACCESS_TOKEN_EXPIRE_TIME / 1000L, memberId);
+        return AuthTokens.of(accessToken, refreshToken, BEARER_TYPE, ACCESS_TOKEN_EXPIRE_TIME / 1000L, 1L);
     }
 
     public Long extractMemberId(String accessToken) {

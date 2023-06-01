@@ -16,7 +16,7 @@ public class AuthTokens {
     private Long expiresIn;
     private Long signupFlag;
 
-    public static AuthTokens of(String accessToken, String refreshToken, String grantType, Long expiresIn, Long memberId) {
-        return new AuthTokens(accessToken, refreshToken, grantType, expiresIn,memberId);
+    public static AuthTokens of(String accessToken, String refreshToken, String grantType, Long expiresIn, Long signupFlag) {
+        return new AuthTokens(accessToken, refreshToken, grantType, expiresIn,signupFlag);
     }
 }

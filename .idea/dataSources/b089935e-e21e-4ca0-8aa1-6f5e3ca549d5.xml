@@ -1033,7 +1033,7 @@ sys|schema||loupang||grant option|G</Grants>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
     <column id="289" parent="285" name="id">
-      <AutoIncrement>2</AutoIncrement>
+      <AutoIncrement>3</AutoIncrement>
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1053,13 +1053,14 @@ sys|schema||loupang||grant option|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="293" parent="286" name="id">
-      <AutoIncrement>2</AutoIncrement>
+      <AutoIncrement>4</AutoIncrement>
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
     <column id="294" parent="286" name="career">
-      <DasType>varchar(255)|0s</DasType>
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <column id="295" parent="286" name="email">
@@ -1071,11 +1072,13 @@ sys|schema||loupang||grant option|G</Grants>
       <Position>4</Position>
     </column>
     <column id="297" parent="286" name="job">
-      <DasType>varchar(255)|0s</DasType>
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <column id="298" parent="286" name="job_group">
-      <DasType>varchar(255)|0s</DasType>
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
     <column id="299" parent="286" name="loupang_time">
@@ -1115,7 +1118,7 @@ sys|schema||loupang||grant option|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="307" parent="287" name="id">
-      <AutoIncrement>7</AutoIncrement>
+      <AutoIncrement>26</AutoIncrement>
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1143,7 +1146,7 @@ sys|schema||loupang||grant option|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="313" parent="288" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>31</AutoIncrement>
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>

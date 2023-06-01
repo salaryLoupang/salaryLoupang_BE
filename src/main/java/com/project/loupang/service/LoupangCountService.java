@@ -55,6 +55,6 @@ public class LoupangCountService {
         int sec = hour / 3600;
         long loupangMoney = sec * loupangTime;
 
-        return new LoupangResponse(member.getId(), member.getNickName(), member.getLoupangTime(),loupangMoney);
+        return new LoupangResponse(member.getId(), member.getNickName(), member.getLoupangTime(),loupangMoney,member.getImageUrl());
     }
 }

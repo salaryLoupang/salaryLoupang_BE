@@ -84,7 +84,7 @@ public class KakaoOauthController {
     @Transactional
     public ResponseEntity<String> updateImages(@RequestBody UrlRequest imageUrl, @AuthenticationPrincipal UserDetailsImpl userDetails){
         Member member = memberRepository.findById(userDetails.getUserId()).orElse(null);
-        member.initImage(imageUrl.getImageUrl());
+        member.initImage(imageUrl.getImageNum());
         return ResponseEntity.ok("이미지 저장 완료");
     }
 
@@ -94,7 +94,7 @@ public class KakaoOauthController {
     })
     @PostMapping("/v1/api/url")
     public String insertImage(@RequestBody UrlRequest request) {
-        repository.save(new BackGround(request.getImageUrl()));
+        repository.save(new BackGround(request.getImageNum()));
         return "이미지 등록 완료";
     }
 }

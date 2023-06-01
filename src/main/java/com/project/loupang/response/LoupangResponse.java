@@ -15,4 +15,6 @@ public class LoupangResponse {
     private long loupangTime;
     @Schema(description = "루팡한 연봉")
     private long loupangSalary;
+    @Schema(description = "선택한 이미지")
+    private String imageNum;
 }

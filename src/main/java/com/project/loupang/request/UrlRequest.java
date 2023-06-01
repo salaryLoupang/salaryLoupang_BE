@@ -4,5 +4,5 @@ import lombok.Getter;
 
 @Getter
 public class UrlRequest {
-    private String imageUrl;
+    private String imageNum;
 }

@@ -25,9 +25,9 @@ public class Member {
     private String username;
 
     private String nickName;
-    private String career;
-    private String jobGroup;
-    private String job;
+    private int career;
+    private int jobGroup;
+    private int job;
     private int salary;
 
     private OAuthProvider oAuthProvider;
@@ -37,7 +37,7 @@ public class Member {
     private String imageUrl;
 
     @Builder
-    public Member(String email, String username, OAuthProvider oAuthProvider, String nickName, String career, String jobGroup, String job, int salary) {
+    public Member(String email, String username, OAuthProvider oAuthProvider, String nickName, int career, int jobGroup, int job, int salary) {
         this.email = email;
         this.username = username;
         this.oAuthProvider = oAuthProvider;

@@ -14,11 +14,11 @@ public class SignupParams {
     @Schema(description = "닉네임")
     private String nickName;
     @Schema(description = "경력")
-    private String career;
+    private int career;
     @Schema(description = "직군")
-    private String jobGroup;
+    private int jobGroup;
     @Schema(description = "직무")
-    private String job;
+    private int job;
     @Schema(description = "연봉")
     private int salary;
 
